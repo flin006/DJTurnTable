@@ -155,6 +155,7 @@ figure video[poster]{
 
 #slantit{
   -webkit-transform: rotate(-1deg);
+  background-color: rgb(61, 61, 61);
 }
 
 .extras{
