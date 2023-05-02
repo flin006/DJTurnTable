@@ -15,6 +15,9 @@ img, video, audio {
 65% { left: -200%; }
 }
 
+.intro a{
+  color:white;
+}
 
 div #slider {
   overflow: hidden;
@@ -56,6 +59,8 @@ html {
 aside{
   grid-area:aside;
 }
+
+
 
 /* header and nav */
 .headerpic{
@@ -184,7 +189,7 @@ h3{
 .review{
   grid-area: review;
 }
-.diff{
+.diff, aside a{
   color:white;
 }
 /***********Silver***********/
@@ -202,6 +207,10 @@ h3{
   color: black;
   font-family: Recky;
   font-size:1.7em;
+}
+
+.intro h3, aside h2{
+  color:white;
 }
 
 .silver li, .gold li, .platinum li{
