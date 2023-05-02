@@ -184,7 +184,9 @@ h3{
 .review{
   grid-area: review;
 }
-
+.diff{
+  color:white;
+}
 /***********Silver***********/
 .silver{
   background: #808080;
@@ -204,6 +206,11 @@ h3{
 
 .silver li, .gold li, .platinum li{
   font-size: 1.4em;
+
+}
+
+.silver li{
+  background-color: #4D4D4D;
 }
 
 .silver p, .gold p, .platinum p{
@@ -225,6 +232,10 @@ h3{
   text-align:left;
   text-decoration:none;
   
+}
+
+.gold li{
+  color:black;
 }
 
 /**************PLATINUM PACKAGE*************/
