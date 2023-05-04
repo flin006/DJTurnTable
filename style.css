@@ -163,6 +163,10 @@ figure video[poster]{
   background-color: rgb(61, 61, 61);
 }
 
+#bestAD{
+  background-color: rgb(61, 61, 61);
+}
+
 .extras{
   grid-area:extras;
 }
@@ -285,7 +289,6 @@ h3{
 .review1, .review2, .review3,.review4, .review5,.review6{
   border-radius:5px;
   margin-bottom:10px;
-  background: #078e56;
 }
 
 .intro2{
