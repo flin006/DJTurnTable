@@ -175,7 +175,7 @@ h3{
   padding: 5px;
 }
 
-.extras p, .info p, .package1 p, .silver li, .gold li, aside li, .intro p, .intro2 p, .review p, .ravereview p{
+.extras p, .info p, .package1 p, .silver li, .gold li, aside li, .intro p, .intro2 p, .review p, .ravereview p, .review1 p, .review2 p, .review3 p, .review4 p, .review5 p, .review6 p{
   font-family: Recky;
   color:white;
   font-size:1.2em;
@@ -272,7 +272,7 @@ h3{
 }
 
 /***********************************************/
-.box, .boxes, .boxess, footer, .info, .package1, aside, .intro, .intro2, .weddings, .school, .corp, .occasions, .review, .ravereview{
+.box, .boxes, .boxess, footer, .info, .package1, aside, .intro, .intro2, .weddings, .school, .corp, .occasions, .review, .ravereview, .review1, .review2, .review3, .review4, .review5,.review6{
     margin-top:7px;
     margin-bottom:4px;
     border: 2px solid white;
@@ -280,6 +280,12 @@ h3{
     background: #015b36;
     text-align:left;
     text-decoration:none;
+}
+
+.review1, .review2, .review3,.review4, .review5,.review6{
+  border-radius:5px;
+  margin-bottom:10px;
+  background: #078e56;
 }
 
 .intro2{
@@ -390,6 +396,13 @@ summary img{
   margin-left: 10px;
 }
 
+.reviewPage{
+  background-color:white;
+  padding:10px;
+  margin-top:15px;
+}
+
+
 /*media queries */
 /*---------------------------Mobile Layout----------------------------*/
 
@@ -406,7 +419,7 @@ summary img{
 
 .container2{
       display:grid;
-      grid-template-columns: auto 1fr;
+      grid-template-columns: auto;
       grid-template-areas:
       "header"
       "nav"
@@ -416,16 +429,28 @@ summary img{
     
   .container3{
     display:grid;
-    grid-template-columns:auto 1fr;
+    grid-template-columns:auto;
     grid-template-areas:
     "header"
     "nav"
     "main"
     "aside"
     "summary"
-    "footer footer";
+    "footer";
     
   }
+  
+  .container4{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "reviewPage"
+    "footer";
+  }
+  
   /*This stuff is for the hamburger menu*/
 .toggleNav {
     display:grid; /*This is what allows the hamburger icon and "Menu" to display*/
@@ -498,6 +523,15 @@ summary img{
     
   }
   
+  .container4{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+    "header nav"
+    "main main"
+    "reviewPage reviewPage"
+    "footer footer";
+  }
   .toggleNav {
     display:grid; /*This is what allows the hamburger icon and "Menu" to display*/
     text-align:center;
@@ -534,6 +568,10 @@ summary img{
     }
 
 }
+
+.reviewPage{
+  grid-area: reviewPage;
+}
 /*-----------------------Laptop Media Query------------------------*/
 
 @media only screen and (min-width: 960px)  {
@@ -566,6 +604,16 @@ summary img{
     "summary summary"
     "footer footer";
     
+  }
+  
+  .container4{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+    "header nav"
+    "main main"
+    "reviewPage reviewPage"
+    "footer footer";
   }
     
     .toggleNav{
