@@ -301,9 +301,7 @@ h3{
   margin:20px;
 }
 
-.info p{
-  color: black;
-}
+
 .box{
   margin-top:50px;
 }
@@ -345,12 +343,12 @@ footer p{
 
 /* --- form--- */
 form {
-    background-color:#729c6f;
+    background-color:#9EBD9E;
     border-radius: 4px;
     border: 2px solid white;
     width:90%;
     margin:auto;
-    color:white;
+    color:black;
     padding:10px;
     font-family: Recky;
     font-size: 1.2em;
