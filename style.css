@@ -15,10 +15,12 @@ img, video, audio {
 65% { left: -200%; }
 }
 
-.intro a{
+.intro a, main a, section a{
   color:white;
 }
-
+#service{
+  max-height:300px;
+}
 div #slider {
   overflow: hidden;
 }
@@ -179,14 +181,18 @@ h3{
   padding: 5px;
 }
 
-.extras p, .info p, .package1 p, .silver li, .gold li, aside li, .intro p, .intro2 p, .review p, .ravereview p, .review1 p, .review2 p, .review3 p, .review4 p, .review5 p, .review6 p{
+.extras p, .info p, .package1 p, .silver li, .gold li, aside li, .intro p, .intro2 p, .review p, .ravereview p, .review1 p, .review2 p, .review3 p, .review4 p, .review5 p, .review6 p, #aboutPage, .musicSample p, .eventPlanning p, .mystory p, .wed p, .wed2 p{
   font-family: Recky;
   color:white;
   font-size:1.2em;
   padding:5px;
 }
 
-.package1 p{
+.mystory p{
+  padding:7px;
+}
+
+.package1 p, .mystory p{
   font-size: 1.4em;
 }
 
@@ -207,13 +213,13 @@ h3{
     text-align:left;
     text-decoration:none;
 }
-.silver h3, .gold h3, .platinum h3, aside h2, .intro h3, .review h3{
+.silver h3, .gold h3, .platinum h3, aside h2, .intro h3, .review h3, .resourceBackground p{
   color: black;
   font-family: Recky;
   font-size:1.7em;
 }
 
-.intro h3, aside h2{
+.intro h3, aside h2, .resourceBackground p{
   color:white;
 }
 
@@ -276,7 +282,7 @@ h3{
 }
 
 /***********************************************/
-.box, .boxes, .boxess, footer, .info, .package1, aside, .intro, .intro2, .weddings, .school, .corp, .occasions, .review, .ravereview, .review1, .review2, .review3, .review4, .review5,.review6{
+.box, .boxes, .boxess, footer, .info, .package1, aside, .intro, .intro2, .weddings, .school, .corp, .occasions, .review, .ravereview, .review1, .review2, .review3, .review4, .review5,.review6, #aboutPage, #galHeading, .resourceBackground, .musicSample, .eventPlanning, .mystory, .wed, .wed2{
     margin-top:7px;
     margin-bottom:4px;
     border: 2px solid white;
@@ -284,6 +290,16 @@ h3{
     background: #015b36;
     text-align:left;
     text-decoration:none;
+    font-family:Recky;
+}
+
+#aboutPage, #galHeading{
+  padding:15px;
+}
+
+#galHeading{
+  color: white;
+  font-size:1.3em;
 }
 
 .review1, .review2, .review3,.review4, .review5,.review6{
@@ -391,10 +407,14 @@ summary h3{
   font-size:1.5em;
 }
 
-summary img{
+summary img, .mystory img{
   max-width:400px;
   padding: 5px;
   margin-left: 10px;
+}
+
+.mystory img{
+  max-width:500px;
 }
 
 .reviewPage{
@@ -403,6 +423,57 @@ summary img{
   margin-top:15px;
 }
 
+/************************Gallery***************************/
+.gallerywrapper {
+  display: grid;
+  justify-items:center;
+  grid-gap:.5em;
+  align-items:end;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.box {
+  border-radius: 1px;
+  padding: 30px;
+    }
+
+.img__wrap {
+  position: relative;
+}
+
+.img__wrap img{
+  width:400px;
+  height:250px;
+}
+
+.img__description_layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(36, 62, 206, 0.6); /*change to match your theme*/
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity .2s, visibility .2s;
+}
+
+.img__wrap:hover .img__description_layer {
+  visibility: visible;
+  opacity: 1;
+}
+
+.img__description {
+  transition: .2s;
+  transform: translateY(1em);
+}
+
+.img__wrap:hover .img__description {
+  transform: translateY(0);
+}
 
 /*media queries */
 /*---------------------------Mobile Layout----------------------------*/
@@ -450,6 +521,17 @@ summary img{
     "main"
     "reviewPage"
     "footer";
+  }
+  
+  .container5{
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "section"
+    "footer"
   }
   
   /*This stuff is for the hamburger menu*/
@@ -532,6 +614,16 @@ summary img{
     "main main"
     "reviewPage reviewPage"
     "footer footer";
+  }
+  
+  .container5{
+    display:grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+    "header nav"
+    "main main"
+    "section section"
+    "footer footer"
   }
   .toggleNav {
     display:grid; /*This is what allows the hamburger icon and "Menu" to display*/
@@ -616,7 +708,16 @@ summary img{
     "reviewPage reviewPage"
     "footer footer";
   }
-    
+  
+  .container5{
+    display:grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+    "header nav"
+    "main main"
+    "section section"
+    "footer footer"
+  }
     .toggleNav{
       display:none;
     }
